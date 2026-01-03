@@ -1,0 +1,302 @@
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:#f4f6f8}
+
+/* ===== LAYOUT ===== */
+.app{display:flex;min-height:100vh;padding-top:50px}
+
+/* ===== TOP BAR ===== */
+.topbar{
+  position:fixed;top:0;left:0;right:0;height:50px;
+  background:#1abc9c;color:#fff;
+  display:flex;align-items:center;
+  padding:0 15px;z-index:1000;
+}
+.menu-icon{font-size:22px;cursor:pointer;margin-right:15px}
+.title{font-weight:bold}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+  width:220px;
+  background:#2c3e50;
+  color:#fff;
+  padding:15px;
+  transition:.3s;
+  margin-left:-220px;   /* HIDDEN BY DEFAULT */
+}
+.sidebar.show{margin-left:0;} /* SHOW WHEN CLICK */
+
+.logo{font-size:20px;font-weight:bold;margin-bottom:20px;text-align:center;}
+.nav-item{display:flex;gap:10px;padding:10px;margin-bottom:8px;cursor:pointer;border-radius:6px;}
+.nav-item:hover{background:#34495e}
+.nav-item.active{background:#1abc9c}
+
+/* ===== MAIN ===== */
+main{flex:1;padding:20px}
+
+/* ===== UI ===== */
+.card{background:#fff;padding:20px;margin-bottom:20px;border-radius:8px;box-shadow:0 2px 5px rgba(0,0,0,.1);}
+input,select,button{padding:6px;margin:5px}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{border:1px solid #ccc;padding:6px;text-align:center}
+tr:nth-child(even){background:#eef2ff}
+
+.small{padding:3px 6px;cursor:pointer}
+.danger{background:#e74c3c;color:#fff;border:none}
+.pay{background:#3498db;color:#fff;border:none}
+
+/* ===== MODAL ===== */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;}
+.modal-box{background:#fff;padding:20px;width:400px;border-radius:8px;}
+#attenBtn{
+  display: flex;
+  
+}
+#attenBtn h2{
+  box-shadow: 0 0 10px;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+#attenBtn h2:hover{
+  background: #2c3e50;
+  color: white;
+}
+
+
+/* Container for the attendance grid */
+.attendance-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-x: auto;
+  padding: 8px;
+  border: 1px solid #ccc;
+  max-width: 100%;
+}
+
+/* Each row (header + student rows) */
+.grid-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* First column: Student info */
+.grid-row > div:first-child {
+  min-width: 260px;
+  flex-shrink: 0;
+}
+
+/* Each day cell */
+.grid-day {
+  width: 32px;
+  min-width: 32px;
+  text-align: center;
+  font-size: 12px;
+  padding: 4px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Small text for Friday/off days */
+.grid-day .small {
+  font-size: 14px;
+  line-height: 1;
+  color: red;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #fff;
+}
+
+/* Card style wrapper */
+.card {
+  background: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+/* Buttons */
+.btn {
+  padding: 4px 10px;
+  border: 1px solid #888;
+  background: #f0f0f0;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.btn:hover {
+  background: #e0e0e0;
+}
+.btn.primary {
+  background: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+.btn.primary:hover {
+  background: #45a049;
+}
+
+/* Scroll horizontally on overflow */
+.attendance-grid::-webkit-scrollbar {
+  height: 8px;
+}
+.attendance-grid::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  .grid-row > div:first-child {
+    min-width: 180px;
+  }
+  .grid-day {
+    width: 28px;
+    min-width: 28px;
+    font-size: 10px;
+  }
+}
+.nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.nav-btn {
+  padding: 6px 12px;
+  border: 1px solid #888;
+  background: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.nav-btn:hover {
+  background: #e0e0e0;
+}
+.nav-btn.active {
+  background: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+.btn{
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 10px;
+}
+.mainclass{
+  display: flex;
+  box-shadow: 0 0 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+.class{
+  box-shadow: 0 0 8px;
+}
+.timetable{
+  box-shadow: 0 0 5px;
+}
+
+.container{
+  display: flex;
+  width: 100%;
+}
+.nav{
+  display: inline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NAV */
+.nav{
+  width:15%;
+  background:#f1f5f9;
+  padding:10px
+}
+.nav h3{
+  padding:8px;
+  margin:6px 0;
+  background:#e5e7eb;
+  border-radius:6px;
+  cursor:pointer
+}
+.nav h3.active{
+  background:#2563eb;
+  color:#fff
+}
+
+/* MAIN */
+.main{
+  width:85%;
+  padding:10px;
+  overflow:auto
+}
+
+table{
+  border-collapse:collapse;
+  width:100%;
+  margin-bottom:10px
+}
+th,td{
+  border:1px solid #ccc;
+  padding:6px;
+  text-align:center;
+  min-width:120px
+}
+
+
+.off{
+  background:#fecaca;
+  font-weight:bold
+}
+
+.current{
+  background:#fde68a
+}
+
+.done{
+  accent-color:#16a34a
+}
+
+/* DAY NAV */
+#dayNav button{
+  margin:4px;
+  padding:6px 10px;
+  border:none;
+  background:#e5e7eb;
+  cursor:pointer;
+  border-radius:6px
+}
+#dayNav button.active{
+  background:#2563eb;
+  color:#fff
+}

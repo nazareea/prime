@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Management</title>
+
+<link rel="stylesheet" href="fixed.css">
+</head>
+
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <span class="menu-icon" onclick="toggleMenu()">☰</span>
+  <span class="title">School Management System</span>
+</div>
+
+<div class="app">
+
+
+<!-- SIDEBAR -->
+<nav class="sidebar" id="sidebar">
+  <div class="logo">🏫 School</div>
+  <div class="nav-item active" onclick="go('dashboard',this)">Dashboard</div>
+  <div class="nav-item" onclick="go('classes',this)">Classes</div>
+  <div class="nav-item" onclick="go('students',this)"> Students</div>
+  <div class="nav-item" onclick="go('teachers',this)">Teachers</div>
+  <div class="nav-item" onclick="go('attendance',this)">Attendance</div>
+  <div class="nav-item" onclick="go('subjects',this)"> Subjects</div>
+  <div class="nav-item" onclick="go('timetable',this)">Time Table</div> 
+<button onclick="renderTimeTablePage()">ttthudnhjbcihiovk</button>
+
+  
+</nav>
+
+<!-- CONTENT -->
+<main id="content"></main>
+</div>
+
+<!-- CLASS MODAL -->
+<div id="classModal" class="modal" style="display:none;">
+  <div class="modal-box">
+    <h3 id="classTitle">Add Class</h3>
+    <input id="className" placeholder="Class name">
+    <select id="classTeacher"></select>
+    <button onclick="saveClass()">Save</button>
+    <button onclick="closeClassForm()">Cancel</button>
+  </div>
+</div>
+<!-- <div id="content" ></div> -->
+<!-- <div id="timetablePage" class="page"></div> -->
+
+<div id="content"></div>
+
+
+
+    
+
+
+
+<script src="main.js"></script>
+<script src="teachers.js"></script>
+<script src="attendance.js"></script>
+<script src="subjects.js"></script>
+<script src="timetable.js"></script>
+
+
+</body>
+</html>
